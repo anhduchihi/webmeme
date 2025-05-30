@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bộ sưu tập ảnh cute 🐤</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <!-- Màn chào -->
+  <div class="welcome-screen" id="welcome">
+    <h2>Chào <span class="name">Thanh Thanh Nhàn</span> nha 🥰</h2>
+    <div class="icon-container" id="iconContainer"></div>
+  </div>
+
+  <!-- Giao diện chính -->
+  <h1>Bộ sưu tập ảnh cute 🐱🐶</h1>
+  <div class="gallery">
+    <% images.forEach(img => { %>
+      <div class="image-card">
+        <img src="/images/<%= img %>" alt="Cute image" />
+        <a class="download-btn" href="/images/<%= img %>" download>Tải ảnh</a>
+      </div>
+    <% }); %>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
